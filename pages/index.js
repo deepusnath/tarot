@@ -36,10 +36,10 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Generate   SQL   Queries from Natural Language</h1>
+            <h1>Tarot Reader</h1>
           </div>
-          <div className="header-subtitle">
-            <h2> Write a quick sentence about what you want the query to be about (ex. Find name of all students in the table, Fetch current date-time from the system, create a table called heroes).</h2>
+          <div className="header-subtitle" align="center">
+            <h2 > Write a quick sentence about yourself including your Date of birth <br />(ex. my date of birth is DD-MM-YYYY and my name is XXX).</h2>
           </div>
         </div>
         {/* Add this code here*/}
@@ -56,7 +56,7 @@ const Home = () => {
               onClick={callGenerateEndpoint}
               >
                 <div className="generate">
-                  {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+                  {isGenerating ? <span className="loader"></span> : <p>Reveal</p>}
                 </div>
               </a>
           </div>
@@ -75,18 +75,7 @@ const Home = () => {
         )}
         </div>
       </div>
-      <div className="badge-container grow">
-        {/* <div className="badge"> */}
-          <a href="https://www.buymeacoffee.com/arjunms">
-            <img
-              // style={{ height: "70px" }}
-              alt="Buy Me a Coffee Widget"
-              src="/black-button.png"
-              class="badge"
-            />
-          </a>
-        {/* </div> */}
-      </div>
+      
     </div>
   );
 };
