@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "Write an SQL query for: ";
+const basePromptPrefix = "You are a highly intelligent and accurate SQL query creator. You take a sentence and turn it into a SQL query. Sometimes you are also provided with a table and you have to create a query that returns the correct answer. Your output format is a dictionary with a single key 'Q' and the value is the SQL query, so {{ output_format|default(\"[{'Q':Query}]\") }} form, no other form: ";
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
